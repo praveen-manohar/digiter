@@ -1,0 +1,35 @@
+{% extends 'base.html' %} #extends base.html means that it will utilize the base.html template
+
+#head markup goes here
+{% block head %}
+    <title>Digiter - SEO Tags Generator</title>
+{% endblock %}
+
+{% block body %}
+<div class="home">
+<div class="container">
+    <h1 class="text-center jumbotron head">Digiter - SEO Generator</h1>
+    <span class="text-center">Generate Meta tags for any website</span>
+    {% if error %}
+    <div class="alert alert-danger mb-3">{{error}}</div>
+    {% endif %}
+    <form action="/" method="POST" class="input-group">
+        <div class="input-group">
+            <input type="text" name="content" id="content" class="form-control" required>
+            <input type="submit" value="Generate" class="btn btn-secondary ml-2">
+        </div>
+        <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="consent" required>
+            <label class="custom-control-label" for="consent">
+                By checking this box, I consent to having my website (named above) scraped for the purpose of generating SEO meta tags.
+            </label>
+        </div>
+    </form>
+</div>
+<div class="container mt-5">
+    <button onclick="copyTXT()" class="btn btn-secondary mb-2">Copy</button>
+    <textarea id="meta-display" class="form-control" rows="10" placeholder="Enter your website and hit the generate button. Your SEO meta tags will appear here.">{% if seo_tag %}{{seo_tag}}{% endif %}</textarea>
+
+</div>
+</div>
+{% endblock %}
