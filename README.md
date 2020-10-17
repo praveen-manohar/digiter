@@ -1,24 +1,25 @@
 # Digiter
 ***Digiter*** - META TAG Generator with Flask, python - Developed by Praveen Manoharan
 
-Live demo, visit visit [Digiter](https://digiter-seo.herokuapp.com/) on your device.
+Live demo, visit visit [Digiter](https://digiterbee.herokuapp.com/) on your device(Web Version of digiter).
 
 
 # Start
 
-Make app.py as main file
+Install the requirment to run the project
 
-**export FLASK_APP=app.py**
+**pip install -r requirements.txt **
 
-Run the flask app
+Run app
 
-**flask run**
+**python app.py**
 
 
 # ToDo List
 
-* Add robots.txt file generator
-* Add sitemap.xml file generator
+<strike>* Add robots.txt file generator</strike> **Done**
+<strike>* Add sitemap.xml file generator</strike> **Done**
+* Add schema markup file generator 
 * And more...
 
 
