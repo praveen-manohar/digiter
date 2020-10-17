@@ -1,7 +1,7 @@
 # Digiter
 ***Digiter*** - Command line tool to generate Metatag, Sitemap.xml, Check Google Rank and Keyword Density of website with python - Developed by [Praveen Manoharan](http://praveen.zerrowtech.com)
 
-Live demo, visit [Digiter](https://digiterbee.herokuapp.com) on your device(Web Version of digiter).
+Live demo, visit [DigiterBee](https://digiterbee.herokuapp.com) on your device(Web Version of digiter).
 
 
 # Start
@@ -17,14 +17,15 @@ Run app
 
 # ToDo List
 
-<strike>* Add robots.txt file generator</strike> **Done**
-<strike>* Add sitemap.xml file generator</strike> **Done**
-* Add schema markup file generator 
+<strike>* Add robots.txt file generator</strike> **Done** &nbsp;
+
+<strike>* Add sitemap.xml file generator</strike> **Done** &nbsp;
+* Add schema markup file generator &nbsp;
 * And more...
 
 
 # Contribution
-I welcome pull requests from all! Thanks in advance! 
+I welcome pull requests from all! Thanks in advance! &nbsp;
 ***Get Pythonified***
 
 
