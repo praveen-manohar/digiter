@@ -1,7 +1,7 @@
 # Digiter
-***Digiter*** - META TAG Generator with Flask, python - Developed by Praveen Manoharan
+***Digiter*** - Command line tool to generate Metatag, Sitemap.xml, Check Google Rank and Keyword Density of website with python - Developed by [Praveen Manoharan](http://praveen.zerrowtech.com)
 
-Live demo, visit visit [Digiter](https://digiterbee.herokuapp.com/) on your device(Web Version of digiter).
+Live demo, visit [Digiter](https://digiterbee.herokuapp.com) on your device(Web Version of digiter).
 
 
 # Start
@@ -30,4 +30,4 @@ I welcome pull requests from all! Thanks in advance!
 
 # License
 
-Created and Maintained by Praveen Manoharan. Licensed under [MIT](LICENSE).
+Created and Maintained by [Praveen Manoharan](http://praveen.zerrowtech.com). Licensed under [MIT](LICENSE).
