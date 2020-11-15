@@ -11,6 +11,7 @@ import datetime
 
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
+
 import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 
@@ -60,23 +61,61 @@ def getMeta(website):
 				 '<meta property="og:image" content="' + image + '">'
 		
 		txt(seo_string)
-		print("allokay")
 
 		return seo_string
 	except Exception as e:
 		pass
 
 def txt(seo_string):
-	print("inside txt")
 	file ='files/meta/'+ datetime.date.today().strftime("%d-%m-%Y_%H-%M-%S") +'_meta_digiter.txt'
-	print("going")
 	with open(file, 'w') as f:
-		print("gents in")
 		f.writelines(seo_string)
 		f.close()
-		print("done")
 	files = file
 	return
+
+def robots(agent,disallow,allow,site):
+	try:
+		seo_string = 'User-agent: '+ agent+'\n' \
+				 'Disallow: ' + disallow_link + '\n' \
+				 'Allow: ' + allow_link + '\n\n' \
+				 'Sitemap: ' + site + '\n'
+	except Exception as e:
+		pass
+
+def markup():
+	
+	try:
+		# set up beautiful soup
+		# 1. create website request
+		source = requests.get(website, verify=False).text
+		# 2. parse website content
+		soup = BeautifulSoup(source, 'lxml')
+		# 3. grab all nessesary information from the page
+		name = soup.find('h1').text.strip()
+		title = soup.find('title').text.strip()
+		image = soup.find('body').img['src']
+		description = soup.find('p').text
+
+		# string used to store meta tag
+		seo_string = '<meta charset="utf-8">\n' \
+				 '<meta http-equiv="X-UA-Compatible" content="IE=edge">\n' \
+				 '<meta name="viewport" content="width=device-width, initial-scale=1">\n' \
+				 '<meta name="description" content="' + description + '">\n' \
+				 '<link rel="canonical" href="' + website + '">\n' \
+				 '<meta property="og:locale" content="en_US">\n' \
+				 '<meta property="og:type" content="website">\n' \
+				 '<meta property="og:site_name" content="' + name + '">\n' \
+				 '<meta property="og:url" content="' + website + '">\n' \
+				 '<meta property="og:title" content="' + title + '">\n' \
+				 '<meta property="og:description" content="' + description + '">\n' \
+				 '<meta property="og:image" content="' + image + '">'
+		
+		txt(seo_string)
+
+		return seo_string
+	except Exception as e:
+		pass
 
 def sitemap_genarator(website):
 	try:
@@ -135,6 +174,7 @@ def rank(url,keyw,device):
 		error = "Please check the domain name you provide [or] Check entered website domain is valid, including web protocol (http/https)"
 		return error
 
+"""
 def main():
 	inp = input("\n<< Digiter - Webversion (https://digiterbee.herokuapp.com) >> \n 1 > To Generate Meta tag for website headers \n 2 > To Generate Sitemap.xml \n 3 > To Check Keyword Density \n 4 > To Check Google Rank\n 5 > To Exit ->")
 	if (inp=="1"):
@@ -163,3 +203,4 @@ def main():
 
 if __name__ == "__main__": 
     main()
+"""
