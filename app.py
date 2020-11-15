@@ -136,23 +136,23 @@ def rank(url,keyw,device):
 		return error
 
 def main():
-	inp = input(">> 1 for meta tag 2> sitemap 3 > keyword 4 rank")
+	inp = input("\n<< Digiter - Webversion (https://digiterbee.herokuapp.com) >> \n 1 > To Generate Meta tag for website headers \n 2 > To Generate Sitemap.xml \n 3 > To Check Keyword Density \n 4 > To Check Google Rank\n 5 > To Exit ->")
 	if (inp=="1"):
-		website=input(">> Enter your website : ")
+		website=input("-> Enter your website : ")
 		getMeta(website)
 		main()
 	elif(inp=="2"):
-		website=input(">> Enter your website : ")
+		website=input("-> Enter your website : ")
 		sitemap_genarator(website)
 		main()
 	elif(inp=="3"):
-		website=input(">> Enter your website : ")
+		website=input("-> Enter your website : ")
 		keyword_density(website)
 		main()
 	elif(inp=="4"):
-		url=input(">> Enter your Website : ")
-		keyw=input(">> Enter your Keyword : ")
-		device=input(">> Enter 'desktop' or 'mobile' : ")
+		url=input("-> Enter your Website : ")
+		keyw=input("-> Enter your Keyword : ")
+		device=input("-> Enter 'desktop' or 'mobile' : ")
 		rank(url,keyw,device)
 		main()
 	elif(inp=="5"):
